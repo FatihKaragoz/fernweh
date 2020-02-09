@@ -1,20 +1,22 @@
 {% extends 'base.html' %}
 
 {% load static %}
-
+{% block title %}
+    Fernweh - Home
+{% endblock %}
 {% block content %}
     <!-- Welcome Area Start -->
     <section class="welcome-area">
         <div class="welcome-slides owl-carousel">
             <!-- Single Slide -->
-            <div class="single-welcome-slide bg-img bg-overlay jarallax" style="background-image: url({% if not user.is_authenticated %}{% static 'img/fernweh/plslogin.jpg' %}{% endif %});">
+            <div class="single-welcome-slide bg-img bg-overlay jarallax" style="background-image: url({% if not user.is_authenticated %}{% static 'img/fernweh/plslogin.jpg' %}{% else %}{% static 'img/bg-img/temporary.jpg' %}{% endif %});">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <!-- Welcome Text -->
                         <div class="col-12">
                             <div class="welcome-text text-right">
-                                <h2 data-animation="fadeInUp" data-delay="300ms">{% if not user.is_authenticated %}for daily <br>astronomy  photo{% endif %}</h2>
-                                <h6 data-animation="fadeInUp" data-delay="500ms">{% if not user.is_authenticated %}please login{% endif %}</h6>
+                                {% if not user.is_authenticated %}<h2 data-animation="fadeInUp" data-delay="300ms">for daily <br>astronomy  photo</h2>{% endif %}
+                                <h6 data-animation="fadeInUp" data-delay="500ms">{% if not user.is_authenticated %}please login{% else %}this is your daily astronomy photo{% endif %}</h6>
                             {% if not user.is_authenticated %}
                                 <div class="hero-btn-group" data-animation="fadeInUp" data-delay="700ms">
                                     <a href="#" class="btn confer-btn">More Information <i class="zmdi zmdi-long-arrow-right"></i></a>
@@ -39,42 +41,42 @@
                 <!-- About Content -->
                 <div class="col-12 col-md-6">
                     <div class="about-content-text mb-80">
-                        <h6 class="wow fadeInUp" data-wow-delay="300ms">About Conference</h6>
-                        <h3 class="wow fadeInUp" data-wow-delay="300ms">Welcome to the Project Management</h3>
-                        <p class="wow fadeInUp" data-wow-delay="300ms">The Project Management is a platform to learn expert techniques for building successful project teams, creating efficient plans and implementing effective tracking measures to ensure your projects come in on deadline and on budget. In one fast-paced, well-designed day, we’ll cover all the essential elements of project management.</p>
-                        <a href="#" class="btn confer-btn mt-50 wow fadeInUp" data-wow-delay="300ms">Interested <i class="zmdi zmdi-long-arrow-right"></i></a>
+                        <h6 class="wow fadeInUp" data-wow-delay="300ms">About Image Library</h6>
+                        <h3 class="wow fadeInUp" data-wow-delay="300ms">Welcome to NASA Image Library of Fernweh</h3>
+                        <p class="wow fadeInUp" data-wow-delay="300ms">Image library gets astronomy photos and videos by your search. Search for the astronomy photos you wonder and according to the information you want.Click to go on a happy journey between thousands of real photos recorded by NASA</p>
+                        <a href="#" class="btn confer-btn mt-50 wow fadeInUp" data-wow-delay="300ms">Image browse <i class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <!-- About Thumb -->
                 <div class="col-12 col-md-6">
                     <div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms">
-                        <img src="img/bg-img/2.png" alt="">
+                        <img src="{%  static 'img/bg-img/blackhole.jpg' %}" alt="">
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Counter Up Area -->
-        <div class="countdown-up-area">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-3">
-                        <!-- Countdown Text -->
-                        <div class="countdown-content-text mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <h6>Conference Date</h6>
-                            <h4>Count Every Second Until the Event</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-9">
-                        <div class="countdown-timer mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <div id="clock"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+{#        <div class="countdown-up-area">#}
+{#            <div class="container">#}
+{#                <div class="row align-items-center">#}
+{#                    <div class="col-12 col-md-3">#}
+{#                        <!-- Countdown Text -->#}
+{#                        <div class="countdown-content-text mb-100 wow fadeInUp" data-wow-delay="300ms">#}
+{#                            <h6>Conference Date</h6>#}
+{#                            <h4>Count Every Second Until the Event</h4>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-12 col-md-9">#}
+{#                        <div class="countdown-timer mb-100 wow fadeInUp" data-wow-delay="300ms">#}
+{#                            <div id="clock"></div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
     </section>
     <!-- About Us And Countdown Area End -->
 

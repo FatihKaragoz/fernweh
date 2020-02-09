@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Fernweh - Signup
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Frey Store - Login Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static "/login/vendor/bootstrap/css/bootstrap.min.css" %}"/>
+	<link rel="icon" type="image/png" href="{% static "/login/vendor/bootstrap/css/bootstrap.css" %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "login/fonts/font-awesome-4.7.0/css/font-awesome.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static "/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static "/login/vendor/animate/animate.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static "/login/vendor/css-hamburgers/hamburgers.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static "/login/vendor/animsition/css/animsition.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static "/login/vendor/select2/select2.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static "/login/vendor/daterangepicker/daterangepicker.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%  static "/login/css/util.css" %}">
+	<link rel="stylesheet" type="text/css" href="{%  static "/login/css/main.css" %}">
+<!--===============================================================================================-->
+    <link href="{% static "jquerydialog/jquery.dialog.min.css" %}" rel="stylesheet">
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "jquerydialog/jquery.dialog.min.js" %}"></script>
+
+</head>
+<body>
+    {% if error == "yes" %}
+        <script>
+                dialog.alert({
+                    title: "Authentication error",
+                    message: "Please check all area and try again.",
+                    button: "Ok",
+                    animation: "fade",
+                    callback: function(value){
+                        console.log(value);
+                    }
+                });
+        </script>
+    {% endif %}
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+
+				<form class="login100-form validate-form" method="POST" action="{% url 'signup' %}">
+                    {% csrf_token %}
+					<span class="login100-form-title p-b-34">
+						Signup to FreyStore's world
+					</span>
+
+					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type full name">
+						<input id="fullname" class="input100" type="text" name="fullname" placeholder="{% if fN == "yes" %} {{ fullname }} {% else %} Full name {% endif %}">
+						<span class="focus-input100"></span>
+					</div>
+                    <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type e-mail">
+						<input id="email" class="input100" type="email" name="email" placeholder="{% if eM == "yes" %} {{ email }} {% else %} Email {% endif %}">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
+						<input class="input100" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100"></span>
+					</div>
+                    <div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Re-type password">
+						<input class="input100" type="password" name="repass" placeholder="Auth password">
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Sign up
+						</button>
+					</div>
+
+                    <div class="w-full text-center p-t-27 p-b-239" style="visibility: hidden">
+						<span class="txt1">
+							Forgot
+						</span>
+
+						<a href="#" class="txt2">
+							User name / password?
+						</a>
+					</div>
+
+
+					<div class="w-full text-center">
+						<a href="{% url 'login' %}" class="txt3">
+							You've already an account? Login
+						</a>
+					</div>
+				</form>
+
+				<div class="login100-more" style="background-image: url({% static 'img/bg-img/login.jpeg' %});"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static "login/vendor/animsition/js/animsition.min.js" %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static "login/vendor/bootstrap/js/popper.js" %}"></script>
+	<script src="{% static "login/vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+	<script src="{% static "login/vendor/bootstrap/js/bootstrap.js" %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static "login/vendor/select2/select2.min.js" %}"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static "login/vendor/daterangepicker/moment.min.js" %}"></script>
+	<script src="{% static "login/vendor/daterangepicker/daterangepicker.js" %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static "login/vendor/countdowntime/countdowntime.js" %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static "login/js/main.js" %}"></script>
+
+{% endblock %}

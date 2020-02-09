@@ -23,7 +23,12 @@ from fernweh import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', views.homeview, name="home"),
-    url(r'^$', views.browseview, name="browse"),
-    url(r'^$', views.aboutview, name="about"),
-    url(r'^$', views.contactview, name="contact"),
+    url(r'^browse/', views.browseview, name="browse"),
+    url(r'^aboutus/', views.aboutview, name="about"),
+    url(r'^contact/', views.contactview, name="contact"),
+    url(r'^login/', views.loginview, name="login"),
+    url(r'^signup/', views.signupview, name="signup"),
+    # url(r'^loginfunc/', views.loginfunc, name="loginfunc"),
+    url(r'^signupfunc/', views.signupfunc, name="signupfunc"),
+    url(r'^logout/', views.logoutfunc, name="logout"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

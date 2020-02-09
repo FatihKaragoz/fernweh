@@ -10,13 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Confer - Conference Event HTML Template</title>
+    <title>{% block title %}{% endblock %}</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="./img/core-img/favicon.png">
+    <link rel="icon" href="{% static 'iko.jpg' %}">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
+{% block externalCSS %}
+
+
+{% endblock %}
 
 </head>
 
@@ -58,7 +62,7 @@
                             </ul>
 
                             <!-- Get Tickets Button -->
-                            <a href="#" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">{% if not user.is_authenticated %} Login {% else %} Logout {% endif %} <i class="zmdi zmdi-long-arrow-right"></i></a>
+                            <a href="{% if not user.is_authenticated %} {% url 'login' %} {% else %}{% url 'logout' %}{% endif %}" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">{% if not user.is_authenticated %} Login {% else %} Logout {% endif %} <i class="zmdi zmdi-long-arrow-right"></i></a>
                         </div>
                         <!-- Nav End -->
                     </div>
@@ -80,8 +84,7 @@
                 <!-- Heading -->
                 <div class="col-12">
                     <div class="section-heading-2 text-center wow fadeInUp" data-wow-delay="300ms">
-                        <p>Partners &amp; Sponsors</p>
-                        <h4>OFFICIAL SPONSOR</h4>
+                        <h4>SPONSORS</h4>
                     </div>
                 </div>
             </div>
@@ -92,7 +95,7 @@
                     <div class="our-sponsor-area d-flex flex-wrap">
                         <!-- Single Sponsor -->
                         <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
-                            <a href="#"><img src="img/core-img/p-1.png" alt=""></a>
+                            <a href="#"><img src="{% static 'img/bg-img/nasaicon.png' %}" alt=""></a>
                         </div>
                         <!-- Single Sponsor -->
                         <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
@@ -513,6 +516,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Active -->
     <script src="{% static 'js/default-assets/active.js' %}"></script>
 
+    {% block exernalJS %}
+
+
+    {% endblock %}
 </body>
 
 </html>
