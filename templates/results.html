@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+{% endblock %}
+
+{% block externalCSS %}
+        <link rel="stylesheet" href="{% static 'modal/jquery.fancybox.css' %}">
+        <link rel="stylesheet" href="{% static 'modal/helpers/jquery.fancybox-buttons.css' %}">
+        <link rel="stylesheet" href="{% static 'modal/helpers/jquery.fancybox-thumbs.css' %}">
+{% endblock %}
+
+{% block content %}
+{#    <section class="breadcrumb-area bg-img bg-gradient-overlay jarallax" style="background-image: url(img/bg-img/37.jpg);">#}
+{#        <div class="container h-100">#}
+{#            <div class="row h-100 align-items-center">#}
+{#                <div class="col-12">#}
+{#                    <div class="breadcrumb-content">#}
+{#                        <h2 class="page-title">Blog Gird</h2>#}
+{#                        <nav aria-label="breadcrumb">#}
+{#                            <ol class="breadcrumb">#}
+{#                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>#}
+{#                                <li class="breadcrumb-item active" aria-current="page">Blog</li>#}
+{#                            </ol>#}
+{#                        </nav>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+    <div class="our-blog-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <!-- Single Blog Area -->
+                {{ html|safe }}
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block exernalJS %}
+        <script src="{% static 'modal/jquery-1.10.2.min.js' %}"></script>
+        <script src="{% static 'modal/jquery.mousewheel.pack.js' %}"></script>
+        <script src="{% static 'modal/helpers/jquery.fancybox-buttons.js' %}"></script>
+        <script src="{% static 'modal/helpers/jquery.fancybox-media.js' %}"></script>
+        <script src="{% static 'modal/helpers/jquery.fancybox-thumbs.js' %}"></script>
+        <script src="{% static 'modal/jquery.fancybox.pack.js' %}"></script>
+        {{ jquery|safe }}
+{% endblock %}
