@@ -1,9 +1,92 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
     Fernweh - Browse Image Library
 {% endblock %}
 
+{% block externalCSS %}
+
+    <link href="{% static 'browsescreen/vendor/mdi-font/css/material-design-iconic-font.min.css' %}s" rel="stylesheet" media="all">
+    <link href="{% static 'browsescreen/vendor/font-awesome-4.7/css/font-awesome.css' %}" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="{% static 'browsescreen/vendor/select2/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{%  static 'browsescreen/vendor/datepicker/daterangepicker.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'browsescreen/css/main.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'browsescreen/css/checkboxes.css' %}" rel="stylesheet" media="all">
+{#    <link href="{% static 'browsescreen/css/bootsrapdatepicker.css' %}" rel="stylesheet" media="all">#}
+{#    <link href="{% static 'login/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="all">#}
+
+{% endblock %}
+
 {% block content %}
+   <div class="page-wrapper p-t-395 p-b-120" style=" background: url('{% static 'img/bg-img/browse-bg.jpg' %}') center center/cover no-repeat;">
+        <div class="wrapper wrapper--w1070">
+            <div class=" card-7">
+                <div class="card-body">
+                    <form class="form" method="POST" action="{% url 'searchfunc' %}">
+                        {% csrf_token %}
+                        <div class="input-group input--xlarge">
+                            <label class="label">search word</label>
+                            <input class="input--style-1" type="text" placeholder="Search word" name="q">
+                        </div>
+
+                        <button class="btn-submit" type="submit">search</button>
+                        <div class="input-group input--medium">
+                            <label class="label">guests</label>
+                            <div class="input-group-icon js-number-input">
+                                <div class="icon-con">
+                                    <span class="plus">+</span>
+                                    <span class="minus">-</span>
+                                </div>
+                                <input class="input--style-1 quantity" type="text" name="pieces" value="2">
+                            </div>
+                        </div>
+                        <div class="input-group input--medium" >
+                              <div class="chiller_cb">
+                                <input class="input--style-1" id="images" name="images" type="checkbox" checked>
+                                <label for="images">Image</label><label style="">&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <span></span>
+                              </div>
+                              <div class="chiller_cb">
+                                <input class="input--style-1" id="audio" name="audio" type="checkbox" checked>
+                                <label for="audio">Audio</label>
+                                <span></span>
+                             </div>
+                        </div>
+
+                        <div class="input-group input--medium">
+                            <label class="label">Description</label>
+                            <input class="input--style-1"  type="text" placeholder="Description" name="desc">
+                        </div>
+                        <div class="input-group input--medium">
+                            <label class="label">Title</label>
+                            <input class="input--style-1"  type="text" placeholder="Title" name="title">
+                        </div>
+                         <div class="input-group input--medium">
+                            <label class="label">Keyword</label>
+                            <input class="input--style-1"  type="text" placeholder="Keyword" name="keyword">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block exernalJS %}
+
+    <script src="{% static 'browsescreen/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'browsescreen/vendor/jquery/jquery.js' %}"></script>
+    <script src="{% static 'browsescreen/vendor/select2/select2.min.js' %}"></script>
+    <script src="{% static 'browsescreen/vendor/jquery-validate/jquery.validate.js' %}"></script>
+    <script src="{% static 'browsescreen/vendor/bootstrap-wizard/bootstrap.min.js' %}"></script>
+    <script src="{% static 'browsescreen/vendor/bootstrap-wizard/jquery.bootstrap.wizard.min.js' %}"></script>
+    <script src="{% static 'browsescreen/vendor/datepicker/moment.min.js' %}"></script>
+{#    <script src="{% static 'browsescreen/vendor/datepicker/daterangepicker.js' %}"></script>#}
+{#    <script src="{% static 'browsescreen/js/yearpicker.js' %}"></script>#}
+    <script src="{% static 'browsescreen/js/global.js' %}"></script>
 
 {% endblock %}

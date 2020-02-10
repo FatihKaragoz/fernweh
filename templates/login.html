@@ -6,6 +6,8 @@
 {% endblock %}
 {% block externalCSS %}
 
+
+
     <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="{% static "/login/vendor/bootstrap/css/bootstrap.min.css" %}"/>
 	<link rel="icon" type="image/png" href="{% static "/login/vendor/bootstrap/css/bootstrap.css" %}"/>
@@ -50,6 +52,20 @@
         </script>
     {% endif %}
 
+    {% if error == "browseautherror" %}
+        <script>
+                dialog.alert({
+                    title: "Please login",
+                    message: "{{ errorinfo }}",
+                    button: "Ok",
+                    animation: "fade",
+                    callback: function(value){
+                        console.log(value);
+                    }
+                });
+        </script>
+    {% endif %}
+
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -59,7 +75,9 @@
 					<span class="login100-form-title p-b-34">
 						Account Login
 					</span>
-
+                    {% if error == "browseautherror" %}
+                       <input id="browse" style="display: none;" type="number" name="browse" value="1">
+                    {% endif %}
 					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type e-mail">
 						<input id="first-name" class="input100" type="email" name="email" placeholder="Email">
 						<span class="focus-input100"></span>

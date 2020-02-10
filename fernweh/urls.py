@@ -30,5 +30,6 @@ urlpatterns = [
     url(r'^signup/', views.signupview, name="signup"),
     # url(r'^loginfunc/', views.loginfunc, name="loginfunc"),
     url(r'^signupfunc/', views.signupfunc, name="signupfunc"),
+    url(r'^searchfunc/', views.searchfunc, name="searchfunc"),
     url(r'^logout/', views.logoutfunc, name="logout"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

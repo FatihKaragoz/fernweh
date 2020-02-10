@@ -1,0 +1,858 @@
+
+/* ==========================================================================
+   #GRID
+   ========================================================================== */
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.row-space {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.row-refine {
+  margin: 0 -15px;
+}
+
+.col-2 {
+  width: -webkit-calc((100% - 20px) / 2);
+  width: -moz-calc((100% - 20px) / 2);
+  width: calc((100% - 20px) / 2);
+}
+
+@media (max-width: 767px) {
+  .col-2 {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   #BOX-SIZING
+   ========================================================================== */
+/**
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* ==========================================================================
+   #RESET
+   ========================================================================== */
+/**
+ * A very simple reset that sits on top of Normalize.css.
+ */
+body,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Remove trailing margins from nested lists.
+ */
+li > ol,
+li > ul {
+  margin-bottom: 0;
+}
+
+/**
+ * Remove default table spacing.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+ *    on fieldsets.
+ */
+fieldset {
+  min-width: 0;
+  /* [1] */
+  border: 0;
+}
+
+button {
+  outline: none;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+/* ==========================================================================
+   #PAGE WRAPPER
+   ========================================================================== */
+.page-wrapper {
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+h6 {
+  font-size: 13px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   #BACKGROUND
+   ========================================================================== */
+.bg-img-3 {
+  background: url("../images/bg-img-03.jpg") center center/cover no-repeat;
+}
+
+.bg-color-1 {
+  background: #ffece0;
+}
+
+/* ==========================================================================
+   #SPACING
+   ========================================================================== */
+.p-t-15 {
+  padding-top: 15px;
+}
+
+.p-t-5 {
+  padding-top: 5px;
+}
+
+.p-t-275 {
+  padding-top: 275px;
+}
+
+@media (max-width: 767px) {
+  .p-t-275 {
+    padding-top: 120px;
+  }
+}
+
+.p-t-395 {
+  padding-top: 395px;
+}
+
+@media (max-width: 767px) {
+  .p-t-395 {
+    padding-top: 120px;
+  }
+}
+
+.p-t-290 {
+  padding-top: 290px;
+}
+
+@media (max-width: 767px) {
+  .p-t-290 {
+    padding-top: 120px;
+  }
+}
+
+.p-t-240 {
+  padding-top: 240px;
+}
+
+@media (max-width: 767px) {
+  .p-t-240 {
+    padding-top: 150px;
+  }
+}
+
+.p-t-200 {
+  padding-top: 200px;
+}
+
+@media (max-width: 767px) {
+  .p-t-200 {
+    padding-top: 150px;
+  }
+}
+
+.p-t-165 {
+  padding-top: 165px;
+}
+
+@media (max-width: 767px) {
+  .p-t-165 {
+    padding-top: 120px;
+  }
+}
+
+.p-b-100 {
+  padding-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+  .p-b-100 {
+    padding-bottom: 250px;
+  }
+}
+
+.p-b-120 {
+  padding-bottom: 120px;
+}
+
+@media (max-width: 767px) {
+  .p-b-120 {
+    padding-bottom: 250px;
+  }
+}
+
+.m-r-45 {
+  margin-right: 45px;
+}
+
+@media (max-width: 767px) {
+  .m-r-45 {
+    margin-right: 15px;
+  }
+}
+
+/* ==========================================================================
+   #WRAPPER
+   ========================================================================== */
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper--w680 {
+  max-width: 680px;
+}
+
+.wrapper--w720 {
+  max-width: 720px;
+}
+
+.wrapper--w900 {
+  max-width: 900px;
+}
+
+.wrapper--w1070 {
+  max-width: 1070px;
+}
+
+.wrapper--w1226 {
+  max-width: 1226px;
+}
+
+/* ==========================================================================
+   #BUTTON
+   ========================================================================== */
+.btn-submit {
+  display: inline-block;
+  line-height: 100px;
+  font-family: inherit;
+  background: #ffe151;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  color: #333;
+  font-size: 18px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 0 30px;
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.btn-submit:hover {
+  background: #ebcd3d;
+}
+
+@media (max-width: 767px) {
+  .btn-submit {
+    width: 100%;
+  }
+  .input--xlarge{
+    width: 100%;
+  }
+}
+
+.m-t-0 {
+  margin-top: 0;
+}
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-t-35 {
+  margin-top: 35px;
+}
+
+/* ==========================================================================
+   #DATEPICKER
+   ========================================================================== */
+.daterangepicker {
+  display: none;
+  width: 560px;
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0;
+  margin-top: 27px;
+  margin-left: -20px;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 767px) {
+  .daterangepicker {
+    width: -webkit-calc(100% - 60px);
+    width: -moz-calc(100% - 60px);
+    width: calc(100% - 60px);
+    padding: 25px 0px;
+  }
+}
+
+.daterangepicker:before {
+  display: none;
+}
+
+.daterangepicker:after {
+  top: -13px;
+  border-right: 13px solid transparent;
+  border-bottom: 13px solid #fff;
+  border-left: 13px solid transparent;
+}
+
+.daterangepicker.opensright:after {
+  left: 84px;
+}
+
+.daterangepicker .calendar {
+  margin: 0;
+  width: 280px;
+  max-width: 280px;
+  padding: 30px;
+  padding-bottom: 25px;
+}
+
+.daterangepicker .calendar th {
+  font-size: 14px;
+  color: #555;
+  cursor: default;
+  font-weight: 700;
+}
+
+.daterangepicker .calendar th.month {
+  font-size: 16px;
+  color: #555;
+  font-weight: 700;
+}
+
+.daterangepicker .calendar th.next, .daterangepicker .calendar th.prev {
+  font-size: 20px;
+  color: #ccc;
+  text-align: center;
+}
+
+.daterangepicker .calendar.left {
+  border-right: 1px solid #e5e5e5;
+}
+
+.daterangepicker .calendar.right {
+  float: right;
+  top: 0;
+}
+
+@media (max-width: 767px) {
+  .daterangepicker .calendar {
+    width: 230px;
+    max-width: 230px;
+    padding: 0;
+  }
+  .daterangepicker .calendar.right, .daterangepicker .calendar.left {
+    border: none;
+    float: none !important;
+    clear: none !important;
+    margin: 0 auto !important;
+  }
+  .daterangepicker .calendar.left {
+    margin-bottom: 30px !important;
+  }
+}
+
+.daterangepicker .calendar-table {
+  padding: 0;
+}
+
+.daterangepicker .calendar-table .table-condensed thead tr:nth-child(2) th {
+  padding-top: 27px;
+  padding-bottom: 17px;
+}
+
+.daterangepicker.ltr .calendar.left .calendar-table {
+  padding: 0;
+}
+
+.daterangepicker_input {
+  display: none;
+}
+
+.daterangepicker td {
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-width: 26px;
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}
+
+@media (max-width: 767px) {
+  .daterangepicker td {
+    height: 26px;
+    width: 26px;
+  }
+}
+
+.daterangepicker td.start-date, .daterangepicker td.end-date {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #00ad5f;
+}
+
+.daterangepicker td.start-date.end-date {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.daterangepicker td.in-range {
+  background: #eee;
+  color: #2c6ed5;
+}
+
+.daterangepicker td.in-range.end-date {
+  color: #fff;
+}
+
+.daterangepicker td.today {
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  border-radius: 3px !important;
+  background: #eee;
+  color: #2c6ed5;
+}
+
+.daterangepicker td.today.in-range {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  background: #eeeeee;
+}
+
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+  background: transparent;
+}
+
+.daterangepicker select {
+  outline: none;
+  font-family: inherit;
+}
+
+.daterangepicker select.monthselect, .daterangepicker select.yearselect {
+  font-size: 16px;
+  padding: 8px 4px;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background: #2c6ed5;
+}
+
+.daterangepicker td.active.today,
+.daterangepicker td.active:hover.today {
+  background: #eee;
+}
+
+/* ==========================================================================
+   #FORM
+   ========================================================================== */
+input,
+textarea {
+  outline: none;
+  margin: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+input:disabled {
+  cursor: pointer;
+  background: transparent;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* CHECKBOX */
+/* Radio button */
+.radio-row {
+  padding-top: 10px;
+}
+
+.radio-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.radio-container:hover input ~ .radio-checkmark {
+  background-color: #fff;
+}
+
+.radio-container input:checked ~ .radio-checkmark {
+  background-color: #fff;
+}
+
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+.radio-container .radio-checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #00ad5f;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 23px;
+  height: 100px;
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  padding: 16px 20px;
+  padding-bottom: 10px;
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  float: left;
+  margin-right: 10px;
+}
+
+.form::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.input-icon {
+  font-size: 24px;
+  color: #808080;
+  position: absolute;
+  line-height: 60px;
+  right: 20px;
+  top: 0;
+  width: 20px;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.input-icon::before {
+  display: block;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.label {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 700;
+}
+
+.input--large {
+  width: 300px;
+}
+
+.input--xlarge {
+  width: 85%;
+}
+
+.input--medium {
+  width: 190px;
+}
+
+@media (max-width: 767px) {
+  .input--large,
+  .input--xlarge,
+  .input--medium {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .input--large,
+  .input--xlarge{
+    width: 100%;
+  }
+  .btn-submit {
+    width: 100%;
+  }
+  .input--medium{
+    margin-top: 20px;
+  }
+}
+
+
+.input--style-1 {
+  font-size: 18px;
+  padding: 9px 0;
+  color: #666;
+  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.input--style-1::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #333;
+}
+
+.input--style-1:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #333;
+  opacity: 1;
+}
+
+.input--style-1::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #333;
+  opacity: 1;
+}
+
+.input--style-1:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #333;
+}
+
+.input--style-1:-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #333;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .m-b-0 {
+    margin-bottom: 26px;
+  }
+}
+
+/* ==========================================================================
+   #SELECT
+   ========================================================================== */
+.quantity {
+  font-size: 18px;
+  color: #333;
+}
+
+.icon-con {
+  position: absolute;
+  width: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #f2f2f2;
+  right: 11px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.minus,
+.plus {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 18px;
+  color: #b2b2b2;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.minus:hover,
+.plus:hover {
+  background: #2c6ed5;
+  color: #fff;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ==========================================================================
+   #CARD
+   ========================================================================== */
+.card-7 {
+  background: transparent;
+  position: relative;
+}
+
+.card-7 .card-body {
+  padding: 0 20px;
+}

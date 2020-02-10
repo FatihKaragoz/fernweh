@@ -8,8 +8,10 @@ def homeview(request,loginsuccess="False"):
 
 
 def browseview(request):
-    return render(request,'browse.html')
-
+    if request.user.is_authenticated:
+      return render(request,'browse.html')
+    else:
+        return render(request,'login.html',{"error":"browseautherror","errorinfo":"You've to login for search NASA image library, please login!","pageload":"browse"})
 
 def aboutview(request):
     return render(request,'about.html')
@@ -26,8 +28,14 @@ def loginview(request):
             user = emailAuth.EmailOrUsernameModelBackend.authenticate(request, username=_email, password=_password)
             if user is not None:
                 login(request, user)
-                print("################## GİRİŞ YAPILDI")
-                return homeview(request, loginsuccess="true")
+                print("##################GİRİŞ YAPILDI")
+                try:
+                    if request.POST['browse']!=None:
+                        if request.POST['browse']=="1":
+                            print("BROWSE'A GİRDİİİİİİİİİİİİİİİİİ ")
+                            return render(request,'browse.html')
+                except:
+                    return homeview(request, loginsuccess="true")
             else:
                 print("################## AUTH ERROR")
                 return render(request, 'login.html', {'error': 'yes'})
@@ -68,6 +76,12 @@ def signupview(request):
 
 def signupfunc(request):
     return render(request,'login.html')
+
+
+def searchfunc(request):
+    return render(request,'login.html')
+
+
 
 def logoutfunc(request):
     logout(request)
