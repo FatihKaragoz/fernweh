@@ -57,8 +57,7 @@
                             <ul id="nav">
                                 <li class="active"><a href="{% url 'home' %}">Home</a></li>
                                 <li><a href="{% url 'browse' %}">Browse</a></li>
-                                <li><a href="{% url 'about' %}">About</a></li>
-                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                <li><a href="{% url 'about' %}">About & Contact</a></li>
                             </ul>
 
                             <!-- Get Tickets Button -->
@@ -112,17 +111,17 @@
                             <div class="single-client-content">
                                 <!-- Single client Text -->
                                 <div class="single-client-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                                    <p>And now for Return to Flight, I'm chief of robotics working in the astronaut office in Houston, as a Canadian.</p>
                                     <!-- Single client Thumb and info -->
                                     <div class="single-client-thumb-info d-flex align-items-center">
                                         <!-- Single client Thumb -->
                                         <div class="single-client-thumb">
-                                            <img src="img/bg-img/15.jpg" alt="">
+                                            <img src="{% static 'img/astronouts/chrisicon.jpg' %}" alt="">
                                         </div>
                                         <!-- Single client Info -->
                                         <div class="client-info">
-                                            <h6>Maria Hernandez</h6>
-                                            <p>UX Manager</p>
+                                            <h6>Chris Hadfield</h6>
+                                            <p>International Space Station</p>
                                         </div>
                                     </div>
                                 </div>
@@ -136,17 +135,17 @@
                             <div class="single-client-content">
                                 <!-- Single client Text -->
                                 <div class="single-client-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                                    <p>“If you were doing something safe, something you already knew could be done, you were wasting time.”</p>
                                     <!-- Single client Thumb and info -->
                                     <div class="single-client-thumb-info d-flex align-items-center">
                                         <!-- Single client Thumb -->
                                         <div class="single-client-thumb">
-                                            <img src="img/bg-img/16.jpg" alt="">
+                                            <img src="{% static 'img/astronouts/kelly-s.jpg' %}" alt="">
                                         </div>
                                         <!-- Single client Info -->
                                         <div class="client-info">
-                                            <h6>Jacqueline Myers</h6>
-                                            <p>UX Manager</p>
+                                            <h6>Scott Kelly</h6>
+                                            <p>ISS</p>
                                         </div>
                                     </div>
                                 </div>
@@ -160,17 +159,17 @@
                             <div class="single-client-content">
                                 <!-- Single client Text -->
                                 <div class="single-client-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                                    <p>“When you discover new things every minute and your mind is absorbing so many experiences, it feels like time expands.”</p>
                                     <!-- Single client Thumb and info -->
                                     <div class="single-client-thumb-info d-flex align-items-center">
                                         <!-- Single client Thumb -->
                                         <div class="single-client-thumb">
-                                            <img src="img/bg-img/15.jpg" alt="">
+                                            <img src="{% static 'img/astronouts/samantha-s.jpg' %}" alt="">
                                         </div>
                                         <!-- Single client Info -->
                                         <div class="client-info">
-                                            <h6>Maria Hernandez</h6>
-                                            <p>UX Manager</p>
+                                            <h6>Samantha Cristoforetti</h6>
+                                            <p>ISS</p>
                                         </div>
                                     </div>
                                 </div>
@@ -187,179 +186,9 @@
     </section>
     <!-- Our Sponsor And Client Area End -->
 
-    <!-- Our Blog Area Start -->
-    <section class="our-blog-area bg-img bg-gradient-overlay section-padding-100-60" style="background-image: url(img/bg-img/17.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Heading -->
-                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="300ms">
-                        <p>Our Blog</p>
-                        <h4>Latest news</h4>
-                    </div>
-                </div>
 
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/18.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Street Food Convention</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i> January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i> Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/19.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Tedx Moscow Conference</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i>Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/20.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Los Angeles Institute</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i>Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- Our Blog Area End -->
-
-    <!-- Contact Area Start -->
-    <section class="contact-our-area section-padding-100-0">
-        <div class="container">
-            <div class="row">
-                <!-- Heading -->
-                <div class="col-12">
-                    <div class="section-heading-2 text-center wow fadeInUp" data-wow-delay="300ms">
-                        <p>Have Question?</p>
-                        <h4>Contact us</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-between">
-                <div class="col-12 col-sm-3">
-                    <div class="contact-information mb-100">
-                        <!-- Single Contact Info -->
-                        <div class="single-contact-info wow fadeInUp" data-wow-delay="300ms">
-                            <p>Address:</p>
-                            <h6>184 Main Collins Street</h6>
-                        </div>
-                        <!-- Single Contact Info -->
-                        <div class="single-contact-info wow fadeInUp" data-wow-delay="300ms">
-                            <p>Phone:</p>
-                            <h6>(226) 446 9371</h6>
-                        </div>
-                        <!-- Single Contact Info -->
-                        <div class="single-contact-info wow fadeInUp" data-wow-delay="300ms">
-                            <p>Email:</p>
-                            <h6>confer@gmail.com</h6>
-                        </div>
-                        <!-- Single Contact Info -->
-                        <div class="single-contact-info wow fadeInUp" data-wow-delay="300ms">
-                            <p>Website:</p>
-                            <h6>www.confer.com</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-8">
-                    <!-- Contact Form -->
-                    <div class="contact_from_area mb-100 clearfix wow fadeInUp" data-wow-delay="300ms">
-                        <div class="contact_form">
-                            <form action="mail.php" method="post" id="main_contact_form">
-                                <div class="contact_input_area">
-                                    <div id="success_fail_info"></div>
-                                    <div class="row">
-                                        <!-- Form Group -->
-                                        <div class="col-12 col-lg-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control mb-30" name="name" id="name" placeholder="Your Name">
-                                            </div>
-                                        </div>
-                                        <!-- Form Group -->
-                                        <div class="col-12 col-lg-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control mb-30" name="name" id="name2" placeholder="Last Name">
-                                            </div>
-                                        </div>
-                                        <!-- Form Group -->
-                                        <div class="col-12 col-lg-6">
-                                            <div class="form-group">
-                                                <input type="email" class="form-control mb-30" name="email" id="email" placeholder="E-mail">
-                                            </div>
-                                        </div>
-                                        <!-- Form Group -->
-                                        <div class="col-12 col-lg-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control mb-30" name="subject" id="subject" placeholder="Your Number">
-                                            </div>
-                                        </div>
-                                        <!-- Form Group -->
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <textarea name="message" class="form-control mb-30" id="message" cols="30" rows="6" placeholder="Your Message *"></textarea>
-                                            </div>
-                                        </div>
-                                        <!-- Button -->
-                                        <div class="col-12">
-                                            <button type="submit" class="btn confer-btn">Send Message <i class="zmdi zmdi-long-arrow-right"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Contact Area End -->
 
     <!-- Footer Area Start -->
@@ -372,16 +201,11 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
                             <!-- Footer Logo -->
-                            <a href="#" class="footer-logo"><img src="img/core-img/logo.png" alt=""></a>
-                            <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain.</p>
+                            <a href="#" class="footer-logo"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                            <p>This website developed by Fatih Karagöz as education purpose.</p>
 
                             <!-- Social Info -->
-                            <div class="social-info">
-                                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-                            </div>
+
                         </div>
                     </div>
 
@@ -393,65 +217,15 @@
 
                             <!-- Contact Area -->
                             <div class="footer-contact-info">
-                                <p><i class="zmdi zmdi-map"></i> 184 Main Collins Street</p>
-                                <p><i class="zmdi zmdi-phone"></i> (226) 446 9371</p>
-                                <p><i class="zmdi zmdi-email"></i> confer@gmail.com</p>
-                                <p><i class="zmdi zmdi-globe"></i> www.confer.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
-                            <!-- Widget Title -->
-                            <h5 class="widget-title">Workshops</h5>
-
-                            <!-- Footer Nav -->
-                            <ul class="footer-nav">
-                                <li><a href="#">OSHA Compliance</a></li>
-                                <li><a href="#">Microsoft Excel Basics</a></li>
-                                <li><a href="#">Forum Speaker Series</a></li>
-                                <li><a href="#">Tedx Moscow Conference</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
-                            <!-- Widget Title -->
-                            <h5 class="widget-title">Gallery</h5>
-
-                            <!-- Footer Gallery -->
-                            <div class="footer-gallery">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <a href="img/bg-img/21.jpg" class="single-gallery-item"><img src="img/bg-img/21.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="img/bg-img/22.jpg" class="single-gallery-item"><img src="img/bg-img/22.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="img/bg-img/23.jpg" class="single-gallery-item"><img src="img/bg-img/23.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="img/bg-img/24.jpg" class="single-gallery-item"><img src="img/bg-img/24.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="img/bg-img/25.jpg" class="single-gallery-item"><img src="img/bg-img/25.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="img/bg-img/26.jpg" class="single-gallery-item"><img src="img/bg-img/26.jpg" alt=""></a>
-                                    </div>
-                                </div>
+                                <p><i class="zmdi zmdi-map"></i>Fatih Karagöz</p>
+                                <p><i class="zmdi zmdi-phone"></i> (+90)5077102084 </p>
+                                <p><i class="zmdi zmdi-email"></i> fatihkkaragoz@gmail.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Copywrite Area -->
         <div class="container">
             <div class="copywrite-content">

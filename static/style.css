@@ -347,7 +347,7 @@ input:required {
   padding-bottom: 100px; }
 
 .section-padding-100-0 {
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 0; }
 
 /* :: 3.0 Preloader Area CSS */
@@ -895,7 +895,7 @@ input:required {
       position: relative;
       z-index: 1;
       font-weight: 700;
-      font-size: 90px;
+      font-size: 50px;
       text-transform: uppercase;
       display: block;
       margin-bottom: 10px;
@@ -1385,6 +1385,7 @@ input:required {
 
 .single-speaker-area {
   position: relative;
+  height: 400px;
   z-index: 1;
   overflow: hidden;
   margin-bottom: 40px;

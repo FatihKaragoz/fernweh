@@ -1,9 +1,37 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}
     Fernweh - About us
 {% endblock %}
 
 {% block content %}
+  <section class="contact--us-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Us Thumb -->
+                <div class="col-12 col-lg-6">
+                    <div class="contact-us-thumb mb-100">
+                        <img src="{% static 'img/bg-img/handofgod.jpg' %}" alt="">
+                    </div>
+                </div>
 
+                <!-- Contact Form -->
+                <div class="col-12 col-lg-6">
+                    <div class="contact_from_area mb-100 clearfix">
+                        <!-- Contact Heading -->
+                        <div class="contact-heading">
+                            <h4>About & Contact Us</h4>
+                            <p>Fernweh is mean of hiraeth in German. Fernweh a web application which using NASA APi, developed with Django Python Web Framework. Developed for education. Fernweh has no commercial purpose</p>
+                            <p>Fatih Karagöz<br>
+                            Phone Number : (+90) 507 7102084<br>
+                            E-mail : fatihkkaragoz@gmail.com <br>
+                            github : https://github.com/FatihKaragoz<br>
+                            Linkedin : https://www.linkedin.com/in/fatih-karag%C3%B6z-163728142/</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
